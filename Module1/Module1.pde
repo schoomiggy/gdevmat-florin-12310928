@@ -37,7 +37,7 @@ void drawLinearFunction()
   fill(purple);
   noStroke();
   
-  for (int x = -200; x <= 200; x++)
+  for (float x = -200; x <= 200; x += 0.1f)
   {
     circle(x, ((x * -5) + 30), 5);
   }
@@ -63,7 +63,7 @@ void drawSineWave()
   float frequency = 10;
   float amplitude = 25;
   
-  for (int x = -32; x <= 32; x++)
+  for (float x = -32; x <= 32; x += 0.1f)
   {
      circle(x * frequency, (float)Math.sin(x) * amplitude, 5);
   }
