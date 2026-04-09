@@ -1,0 +1,30 @@
+class Walker
+{
+  PVector position = new PVector();
+  PVector speed = new PVector(5, 5);
+  
+  void render()
+  { 
+    color walkerColor = color(0, 0, 255);
+    
+    fill(walkerColor);
+    stroke(walkerColor);
+    
+    circle(position.x, position.y, 50);
+  }
+ 
+  void moveAndBounce()
+  {
+    position.add(speed);
+  
+    if ((position.x > Window.right) || (position.x < Window.left))
+    {
+      speed.x *= -1; 
+    }
+  
+    if ((position.y > Window.top) || (position.y < Window.bottom))
+    {
+      speed.y *= -1; 
+    }
+  }
+}
